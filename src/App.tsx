@@ -69,6 +69,7 @@ const App = (): JSX.Element => {
       const foodData = await api.refetchQueries({
         include: [
           {
+            // @ts-expect-error: https://github.com/apollographql/apollo-client/issues/5419#issuecomment-598065442
             query: LIST_FOOD,
           },
         ],
